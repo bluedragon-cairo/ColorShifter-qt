@@ -131,7 +131,7 @@ DwmGetColorizationParameters(&myColor); // myColor now contains the current valu
 
 myColor.color = 0xFF00FF00; // Alpha: 255, Red: 0, Green: 255, Blue: 0
 
-DwmSetColorizationParameters(&myColor, 0); // I don't know what the 0 does but you need it
+DwmSetColorizationParameters(&myColor, 0); // When the second parameter is 0, it changes the color permanently. When it's 1, it will change temporarily and the color changes will be discarded when restarting DWM
 ```
 
 By knowing this basic implementation you can do all sorts of things with the Windows theme colors. I'm not sure why Microsoft chose to leave these functions undocumented; I think they're pretty neat.
